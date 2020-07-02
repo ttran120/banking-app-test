@@ -4,7 +4,7 @@
 }
 
 label {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 button {
@@ -12,7 +12,7 @@ button {
 }
 
 .sort-button {
-  min-width: 90px;
+  min-width: 110px;
   padding: 10px 0;
   text-transform: uppercase;
 }
@@ -24,13 +24,14 @@ input {
 .sort-header-container {
   display: flex;
   align-items: center;
-  width: 20%;
+  flex: 0 1 100%;
 }
 
 .sort-button-container {
   display: flex;
   align-items: center;
-  width: 80%;
+  flex: 0 1 100%;
+  justify-content: center;
 }
 
 .filter-container {
@@ -49,16 +50,18 @@ input {
 .sort-container {
   display: flex;
   flex: 0 1 100%;
+  flex-flow: row wrap;
 }
 
 .sort-label {
   font-family: Kanit;
   width: 100%;
-  text-align-last: right;
+  text-align-last: center;
   padding-right: 10px;
+  display: block;
 }
 
-@media only screen and (min-width: 1550px) {
+@media only screen and (min-width: 980px) {
   .search-box {
     display: flex;
     vertical-align: center;
@@ -67,5 +70,41 @@ input {
 
   .sort-container {
     flex: 0 1 45%;
+  }
+
+  .sort-label {
+    text-align-last: right;
+  }
+
+  .sort-header-container {
+    flex: 0 1 20%;
+  }
+
+  .sort-button-container {
+    flex: 0 1 80%;
+  }
+}
+
+@media only screen and (min-width: 1340px) {
+  .search-box {
+    display: flex;
+    vertical-align: center;
+    flex: 0 1 45%;
+  }
+
+  .sort-container {
+    flex: 0 1 45%;
+  }
+
+  .sort-label {
+    text-align-last: right;
+  }
+
+  .sort-header-container {
+    flex: 0 1 20%;
+  }
+
+  .sort-button-container {
+    flex: 0 1 80%;
   }
 }

@@ -10,6 +10,9 @@ span {
 table {
   width: 100%;
   font-family: Kanit;
+  /*
+  to allow borders
+  */
   border-collapse: collapse;
 }
 
@@ -22,7 +25,6 @@ tr {
   border-color: lightgray;
   border-style: solid;
 }
-
 
 .category-bar {
   width: 15px;

@@ -29,6 +29,12 @@ input {
   justify-content: flex-end;
 }
 
+.button-container-preview {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .preview-container {
   padding: 15px;
 }

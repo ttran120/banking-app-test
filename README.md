@@ -21,4 +21,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Architecture
-Right now the application is focused around the feature components that get their data from the appropriate services.  Most of the logic is handled in the services.  It would be good to add routing, and have the transactions page on a transactions route so other enhancements can be made in the future (new feature pages).  
+Right now the application is focused around the feature components that get their data from the appropriate services.  Most of the logic is handled in the services.  It would be good to add routing, and have the transactions page on a transactions route so other enhancements can be made in the future (new feature pages).  In the future would like to separate out feature modules to make code more modular and support lazy loading.
