@@ -1,0 +1,57 @@
+img {
+  height: 100px;
+  width: 100px;
+}
+
+span {
+  display: block;
+}
+
+table {
+  width: 100%;
+  font-family: Kanit;
+  border-collapse: collapse;
+}
+
+.table-container {
+  padding: 0 20px;
+}
+
+tr {
+  border-width: 2px;
+  border-color: lightgray;
+  border-style: solid;
+}
+
+
+.category-bar {
+  width: 15px;
+}
+
+.merchant-logo {
+  width: 100px;
+}
+
+.merchant-text {
+  font-weight: 500;
+}
+
+.transaction-type-text {
+  font-weight: 300;
+}
+
+.amount-text {
+  font-weight: 700;
+  text-align: right;
+  padding: 10px;
+}
+
+.transaction-info {
+  padding: 10px;
+}
+
+.date-info {
+  min-width: 60px;
+  text-align: center;
+  margin: 20px;
+}

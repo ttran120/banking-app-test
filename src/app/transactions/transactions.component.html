@@ -1,0 +1,31 @@
+<app-header
+  iconClass="icon-briefcase"
+  title="Recent Transactions"
+></app-header>
+<div class="filter-container">
+  <div class="search-box">
+    <input placeholder="Search by typing..." [(ngModel)]="filter" (ngModelChange)="filterTransactions()">
+    <button class="x-filter" (click)="clearFilter()">X</button>
+  </div>
+  <div class="sort-container">
+    <div class="sort-header-container">
+      <span class="sort-label">Sort By</span>
+    </div>
+    <div class="sort-button-container">
+      <button class="sort-button" (click)="sortDate()">Date
+        <span *ngIf="sortDateOrder === 'DSC'">▼</span>
+        <span *ngIf="sortDateOrder === 'ASC'">▲</span>
+      </button>
+      <button class="sort-button" (click)="sortBeneficiary()">Beneficiary
+        <span *ngIf="sortBeneficiaryOrder === 'DSC'">▼</span>
+        <span *ngIf="sortBeneficiaryOrder === 'ASC'">▲</span>
+      </button>
+      <button class="sort-button" (click)="sortAmount()">Amount
+        <span *ngIf="sortAmountOrder === 'DSC'">▼</span>
+        <span *ngIf="sortAmountOrder === 'ASC'">▲</span>
+      </button>
+    </div>
+  </div>
+</div>
+<app-transaction-list [filterString]="filter" [transactions]="transactionDisplayModel"></app-transaction-list>
+

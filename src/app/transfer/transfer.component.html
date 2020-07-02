@@ -1,0 +1,61 @@
+<app-header
+  iconClass="icon-arrow"
+  title="Make a Transfer"
+></app-header>
+
+<div [ngSwitch]="step">
+  <div *ngSwitchCase="'transferForm'" class="form">
+    <form [formGroup]="transferForm">
+      <div class="input-container">
+        <label>FROM ACCOUNT</label>
+        <input formControlName="fromAccount">
+      </div>
+      <div class="input-container">
+        <label>TO ACCOUNT</label>
+        <input formControlName="toAccount">
+      </div>
+      <div class="input-container">
+        <label>AMOUNT</label>
+        <input
+          type="string"
+          currencyMask
+          formControlName="amount"
+          [options]="
+          {
+            allowNegative: false,
+            nullable: false,
+            prefix: '$ ',
+            thousands: ',',
+            decimal: '.',
+            align: 'left'
+          }"
+        >
+      </div>
+      <div class="button-container">
+        <button class="submit-button" type="submit" (click)="submit()">Submit</button>
+      </div>
+    </form>
+    <span *ngIf="overdraftError">Cannot overdraft by $500.00</span>
+  </div>
+  <div class="preview-container" *ngSwitchCase="'transferPreview'">
+    <span class="preview-header">FROM ACCOUNT</span>
+    <div>
+      <span class="preview-data">{{transferForm.get('fromAccount').value}}</span>
+    </div>
+
+    <span class="preview-header">TO ACCOUNT</span>
+    <div>
+      <span class="preview-data">{{transferForm.get('toAccount').value}}</span>
+    </div>
+
+    <span class="preview-header">AMOUNT</span>
+    <div>
+      <span class="preview-data">{{transferForm.get('amount').value | currency: 'USD'}}</span>
+    </div>
+
+    <div class="button-container">
+      <button class="submit-button" (click)="goBack()">Cancel</button>
+      <button class="submit-button" type="submit" (click)="completeTransaction()">Submit</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+input {
+  display: block;
+  width: 100%;
+}
+
+.form {
+  width: 100%
+}
+
+.submit-button {
+  background-color: orange;
+  color: white;
+  font-family: Kanit;
+  text-transform: uppercase;
+  border-width: 0;
+  border-radius: 2px;
+  margin: 20px;
+  width: 40%;
+  min-height: 50px;
+}
+
+.input-container {
+  padding: 15px;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.preview-container {
+  padding: 15px;
+}
+
+.preview-header {
+  font-family: Kanit;
+  font-weight: bold;
+}
+
+.preview-data {
+  font-family: Kanit;
+  font-weight: 300;
+}

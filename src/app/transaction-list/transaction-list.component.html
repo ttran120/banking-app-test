@@ -1,0 +1,18 @@
+<div class="table-container">
+    <table>
+      <tr *ngFor="let transaction of transactions">
+        <td class="category-bar" [style.backgroundColor]="transaction.categoryCode"></td>
+        <td class="date-info">{{transaction.transactionDate | date: 'MMM. dd' | titlecase}}</td>
+        <td class="merchant-logo">
+          <img [src]="transaction.merchantLogo">
+        </td>
+        <td class="transaction-info">
+
+          <span class="merchant-text">{{transaction.merchant}}</span>
+          <span class="transaction-type-text">{{transaction.transactionType}}</span>
+        </td>
+        <td>
+          <span class="amount-text">-{{transaction.amount | currency:'USD'}}</span></td>
+      </tr>
+    </table>
+</div>

@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+h1 {
+  font-family: Kanit;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+label {
+  font-family: Kanit;
+  font-weight: bold;
+}
+
+input {
+  padding: 5px 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-color: grey;
+  width: 100%;
+  font-family: Kanit;
+}
+
+.component {
+  background-color: white;
+  margin: 20px;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+
+.col-6 {
+  width: 50%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-12 {
+  width: 100%;
+}

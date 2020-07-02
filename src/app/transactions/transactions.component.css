@@ -1,0 +1,71 @@
+.x-filter {
+  border-width: 0;
+  width: 10%;
+}
+
+label {
+  font-size: 14px;
+}
+
+button {
+  font-family: Kanit;
+}
+
+.sort-button {
+  min-width: 90px;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+input {
+  width: 90%
+}
+
+.sort-header-container {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+
+.sort-button-container {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.filter-container {
+  width: 100%;
+  padding: 20px 5px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.search-box {
+  display: flex;
+  padding: 20px;
+  flex: 0 1 100%;
+}
+
+.sort-container {
+  display: flex;
+  flex: 0 1 100%;
+}
+
+.sort-label {
+  font-family: Kanit;
+  width: 100%;
+  text-align-last: right;
+  padding-right: 10px;
+}
+
+@media only screen and (min-width: 1550px) {
+  .search-box {
+    display: flex;
+    vertical-align: center;
+    flex: 0 1 45%;
+  }
+
+  .sort-container {
+    flex: 0 1 45%;
+  }
+}
