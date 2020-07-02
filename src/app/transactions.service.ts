@@ -119,9 +119,9 @@ export class TransactionsService {
   // Sorts the transactions list by beneficiary
   sortBeneficiary(sortType: string): void {
     if (sortType === 'DSC') {
-      this.transactions.sort((a, b) => (a.merchant > b.merchant) ? -1 : 1);
+      this.transactions.sort((a, b) => (a.merchant.toLowerCase() > b.merchant.toLowerCase()) ? -1 : 1);
     } else if (sortType === 'ASC') {
-      this.transactions.sort((a, b) => (a.merchant < b.merchant) ? -1 : 1);
+      this.transactions.sort((a, b) => (a.merchant.toLowerCase() < b.merchant.toLowerCase()) ? -1 : 1);
     }
     this.updateTransactionForSubscribers();
   }
